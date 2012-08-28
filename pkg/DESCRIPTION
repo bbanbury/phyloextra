@@ -1,0 +1,10 @@
+Package: phyloextra
+Version: 1.0
+Date: 2012-8-28
+Title: Extra helpful tools for phylogentics
+Author: Barb Banbury <bbanbury@utk.edu>
+Maintainer: Barb Banbury <bbanbury@utk.edu>
+Depends: ape, geiger
+Repository: github
+Description: Various functions for manipulating phylogenies and comparative data
+License: GPL (>= 2)
