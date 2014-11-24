@@ -1,5 +1,16 @@
+#' Get Tree Ancestors
+#' 
+#' This function will traverse a tree rootward, and return the all ancestors for a node.
+#' @param phy A phylogenetic tree in the class "phylo"
+#' @param node A numerical node within phy
+#' @export
+#' @return Returns a node number
+#' @seealso \link{whichNodesArePolytomies} \link{node.offspring}
+#' @examples
+#' tree <- rtree(10)
+#' GetAncestors(tree, 9)
+
 GetAncestors <- function(tree, tip) {
-#function to tree traverse back to the root to get node numbers
   Root <- Ntip(tree) + 1
   is.done <- FALSE
   desc <- tip
@@ -13,4 +24,5 @@ GetAncestors <- function(tree, tip) {
     else
       desc <- b
   }
+  return(desc.vector)
 }
