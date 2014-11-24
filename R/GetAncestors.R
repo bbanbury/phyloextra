@@ -1,8 +1,8 @@
 #' Get Tree Ancestors
 #' 
 #' This function will traverse a tree rootward, and return the all ancestors for a node.
-#' @param phy A phylogenetic tree in the class "phylo"
-#' @param node A numerical node within phy
+#' @param tree A phylogenetic tree in the class "phylo"
+#' @param tip A numerical node within phy
 #' @export
 #' @return Returns a node number
 #' @seealso \link{whichNodesArePolytomies} \link{node.offspring}

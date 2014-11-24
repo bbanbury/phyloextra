@@ -14,7 +14,7 @@
 #' rownames(chars) <- paste0("t", 1:9)
 #' dropTaxaFromPhy(tree, chars, toFile=FALSE)
 
-dropTaxaFromPhy <- function(phy, char, toFile=TRUE, treeFormat=match.arg(arg=priorFn,choices=c("newick", "nexus"),several.ok=FALSE)){
+dropTaxaFromPhy <- function(phy, char, toFile=TRUE, treeFormat=match.arg(treeFormat,choices=c("newick", "nexus"),several.ok=FALSE)){
   a <- name.check(phy, char)
   if (a[1] == "OK" || length(a$tree_not_data) == 0)
     warning("You do not need to drop taxa from the phylogeny")

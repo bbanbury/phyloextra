@@ -12,7 +12,8 @@
 #' plotPrior("normal", c(1,2))
 #' plotPrior("gamma", c(2, .2), plotQuants=FALSE, plotLegend=FALSE)
 
-plotPrior <- function(priorFn=match.arg(arg=priorFn,choices=c("fixed", "uniform", "normal", "lognormal", "gamma", "exponential"),several.ok=FALSE), priorVariables, plotQuants=TRUE, plotLegend=TRUE){
+plotPrior <- function(priorFn, priorVariables, plotQuants=TRUE, plotLegend=TRUE){
+  priorFn <- match.arg(arg=priorFn,choices=c("fixed", "uniform", "normal", "lognormal", "gamma", "exponential"),several.ok=FALSE)
   x <- NA
   quant <- c(0.01, 0.05, 0.25, .50, 0.75, 0.95, 0.99)
   quant.value <- NULL
@@ -102,6 +103,6 @@ plotPrior <- function(priorFn=match.arg(arg=priorFn,choices=c("fixed", "uniform"
   }
   results <- data.frame(cbind(quant, quant.value))
   if(plotLegend)
-    legend("topright", leg=paste(c(quant, signif(quant.value, digits=3))), title="Quantiles", ncol=2, bty="n")
+    legend("topright", legend=paste(c(quant, signif(quant.value, digits=3))), title="Quantiles", ncol=2, bty="n")
   return(results)	
 }

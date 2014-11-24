@@ -13,7 +13,7 @@
 #' tree2 <- rtree(9)
 #' matchTreeTaxa(tree1, tree2, toFile=FALSE)
 
-matchTreeTaxa <- function(phy1, phy2, toFile=TRUE, treeFormat=match.arg(arg=priorFn,choices=c("newick", "nexus"), several.ok=FALSE)){
+matchTreeTaxa <- function(phy1, phy2, toFile=TRUE, treeFormat=match.arg(treeFormat,choices=c("newick", "nexus"), several.ok=FALSE)){
   a <- TreeNameCheck(phy1, phy2)
   if(a[1] == "OK")
     warning("You do not need to drop taxa from either phylogeny")

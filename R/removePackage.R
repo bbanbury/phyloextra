@@ -4,8 +4,8 @@
 #' @param packageName An installed package 
 #' @export
 #' @examples
-#' install.packages("ape")
-#' removePackage("ape")
+#' #install.packages("ape")
+#' #removePackage("ape")
 
 removePackage <- function(packageName) {
   whichPackages <- which(rownames(installed.packages()) == packageName)
