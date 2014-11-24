@@ -1,2 +1,0 @@
-export(CheckForRepeatSeeds, ConvertFastaToPhylip, DataNameCheck, TreeNameCheck, collapseNode, dropTaxaFromData, dropTaxaFromPhy, findRepeats, howManyPolytomies, is.polytomy, matchData, matchTreeTaxa, node.leaves, node.offspring, optimizePolytomyPruning, parent.node, phyDataMatch, plotPrior, pruneFromPolytomies, pruningToClade, whichNodesArePolytomies)
-import(ape, geiger)
