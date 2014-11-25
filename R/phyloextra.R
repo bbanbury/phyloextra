@@ -14,4 +14,5 @@
 #' @docType package
 #' @name phyloextra
 #' @import geiger
+#' @import ape
 NULL
